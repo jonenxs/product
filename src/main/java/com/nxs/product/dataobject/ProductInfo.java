@@ -45,6 +45,12 @@ public class ProductInfo {
      */
     private Integer productStatus;
 
+
+    /**
+     * 库存
+     */
+    private Integer productStock;
+
     /**
      * 类目编号
      */

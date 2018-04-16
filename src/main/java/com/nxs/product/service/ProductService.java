@@ -1,5 +1,6 @@
 package com.nxs.product.service;
 
+import com.nxs.product.dto.CartDTO;
 import com.nxs.product.dataobject.ProductInfo;
 
 import java.util.List;
@@ -11,4 +12,17 @@ public interface ProductService {
      * @return 在架商品列表
      */
     List<ProductInfo> findAll();
+
+    /**
+     * 根据商品id list查询商品列表
+     * @param productIdList
+     * @return
+     */
+    List<ProductInfo> findList(List<String> productIdList);
+
+    /**
+     * 扣库存
+     * @param cartDTOList
+     */
+    void decreaseStock(List<CartDTO> cartDTOList);
 }
